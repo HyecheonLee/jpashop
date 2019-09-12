@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org" th:fragment="layout (template)">
+<head th:replace="fragments/commonHead::head"></head>
+<body>
+<header class="container">
+    <div th:replace="fragments/commonHeader::commonHeader"></div>
+</header>
+<hr/>
+<div class="container">
+    <div class="container xd-container">
+        <th:block th:include="${template}"/>
+    </div>
+</div>
+<hr/>
+<footer class="container">
+    <div th:replace="fragments/commonFooter::commonFooter"></div>
+</footer>
+</body>
+</html>

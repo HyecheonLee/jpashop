@@ -1,0 +1,29 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<body>
+<form method="post" action="/order">
+    <div class="form-group">
+        <label class="form-text">주문회원</label>
+        <select required name="memberId" class="custom-select">
+            <option value="">회원선택</option>
+            <th:block th:each="member :${members}">
+                <option th:value="${member.id}" th:text="${member.name}"></option>
+            </th:block>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="form-text">상품명</label>
+        <select required name="itemId" class="custom-select">
+            <option value="">상품선택</option>
+            <th:block th:each="item :${items}">
+                <option th:value="${item.id}" th:text="${item.name}"></option>
+            </th:block>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="count" class="form-text">주문수량</label>
+        <input name="count" type="number" class="form-control" id="count" placeholder="수량을 입력하세요"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
