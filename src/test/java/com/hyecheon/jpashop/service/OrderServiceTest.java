@@ -7,12 +7,11 @@ import com.hyecheon.jpashop.domain.OrderStatus;
 import com.hyecheon.jpashop.domain.item.Book;
 import com.hyecheon.jpashop.domain.item.Item;
 import com.hyecheon.jpashop.domain.item.NotEnoughStockException;
-import com.hyecheon.jpashop.repository.OrderRepository;
+import com.hyecheon.jpashop.repository.order.OrderRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Example;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 

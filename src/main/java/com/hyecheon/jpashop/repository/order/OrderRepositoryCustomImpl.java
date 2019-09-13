@@ -1,4 +1,4 @@
-package com.hyecheon.jpashop.repository;
+package com.hyecheon.jpashop.repository.order;
 
 import com.hyecheon.jpashop.domain.Order;
 import com.hyecheon.jpashop.domain.OrderSearch;

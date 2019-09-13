@@ -3,7 +3,7 @@ package com.hyecheon.jpashop.service;
 import com.hyecheon.jpashop.domain.*;
 import com.hyecheon.jpashop.domain.item.Item;
 import com.hyecheon.jpashop.repository.MemberRepository;
-import com.hyecheon.jpashop.repository.OrderRepository;
+import com.hyecheon.jpashop.repository.order.OrderRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,6 +43,6 @@ public class OrderService {
     }
 
     public List<Order> findOrders(OrderSearch orderSearch) {
-        return orderRepository.findAll(orderSearch);
+        return orderRepository.search(orderSearch);
     }
 }
